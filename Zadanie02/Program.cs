@@ -9,8 +9,12 @@ if (number1 == (number2*number2))
 {
    Console.WriteLine("First number is square second numer");
 }
-if (number2 == (number1*number1))
+else if (number2 == (number1*number1))
 {
    Console.WriteLine("Second number is square first numer"); 
 }
-if ((number1*number1) != (number2)) 
+else 
+{
+    Console.WriteLine("First and Second number is not square each other"); 
+}
+
