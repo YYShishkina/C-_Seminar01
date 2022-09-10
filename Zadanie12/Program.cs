@@ -9,4 +9,4 @@ int yA = int.Parse (coordinate[1]);
 int xB = int.Parse (coordinate[2]);
 int yB = int.Parse (coordinate[3]);
 double distance = Math.Sqrt((xA-xB)*(xA-xB)+(yA-yB)*(yA-yB));
-Console.WriteLine($"Расстояние между точками {distance}");
+Console.WriteLine($"Расстояние между точками {distance:F3}");
