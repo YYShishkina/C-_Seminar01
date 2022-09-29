@@ -27,13 +27,33 @@ int InterInt(string prompt)
 //     return float.Parse(Console.ReadLine()!);
 // }
 
+// int [ , ] FillMatrix(int [ , ] numbers, int height, int width)
+// {
+//      for (int i=0; i<height; i++)
+//      {
+//          for (int j=0; j<width; j++)
+//          {
+//              numbers[i,j]=i+j;
+//          }
+//      }
+//      return numbers;
+//}    
+
 int [ , ] FillMatrix(int [ , ] numbers, int height, int width)
 {
      for (int i=0; i<height; i++)
      {
          for (int j=0; j<width; j++)
          {
-             numbers[i,j]=i+j;
+             if (j==0) {numbers[i,j]=1;
+                }
+                else if (j==1){
+                    numbers[i,j]=i;
+                }
+                else if (j==2)
+                {
+                    numbers[i,j]=1*i;
+                }
          }
      }
      return numbers;
@@ -42,7 +62,9 @@ int [ , ] FillMatrix(int [ , ] numbers, int height, int width)
 void Print(int [,] numbers, int height, int width){
 for (int i=0; i<height; i++){
     for (int j=0; j<width; j++){
-        Console.Write ($"{numbers [i,j],3} ");
+        if (j==0) {Console.Write ($"{numbers [i,j],3} * ");}
+        else if (j==1) {Console.Write($"{numbers [i,j],3} = ");}
+        else if (j==2) {Console.Write($"{numbers [i,j],3}");}
     }
     Console.WriteLine();
 }
