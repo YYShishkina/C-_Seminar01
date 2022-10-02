@@ -23,12 +23,12 @@ Print2DArray(secondArray);
 Console.WriteLine();
 if (firstArray.GetLength(1)!=secondArray.GetLength(0))
 {
-    Console.WriteLine("This Arrays can't be multiplayed");
+    Console.WriteLine("This Arrays can't be multiplication");
 }
 else
 {
-    Console.WriteLine("The multiplay first and second 2DArray");
-    Print2DArray(FindMultiplayOf2DArrays(firstArray,secondArray));
+    Console.WriteLine("The result multiplication first and second 2DArray");
+    Print2DArray(FindMultiOf2DArrays(firstArray,secondArray));
 }
 
 
@@ -63,7 +63,7 @@ void Print2DArray (int [,] numbers)
     }
 }
 
-int [,] FindMultiplayOf2DArrays(int [,] firstArray, int [,] secondArray)
+int [,] FindMultiOf2DArrays(int [,] firstArray, int [,] secondArray)
 {
     int[,] arrayResult = new int [firstArray.GetLength(0),secondArray.GetLength(1)];
     
