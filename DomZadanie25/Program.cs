@@ -46,11 +46,11 @@ int[,,] Fill3DArray (int [,,] numbers)
 
 void Print3DArray (int [,,] numbers)
 {
-    for (int i=0; i<numbers.GetLength(0); i++)
+    for (int i=0; i<numbers.GetLength(2); i++)
     {
-        for (int j=0; j<numbers.GetLength(1); j++)
+        for (int j=0; j<numbers.GetLength(0); j++)
         {
-            for (int k=0; k<numbers.GetLength(2); k++)
+            for (int k=0; k<numbers.GetLength(1); k++)
             {
                 Console.Write($"{numbers[j,k,i],3}({j},{k},{i}) ");
             }
